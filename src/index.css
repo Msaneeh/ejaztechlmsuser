@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: "Manrope Variable", sans-serif;
+
+  /* ===== Your Brand Colors ===== */
+  --color-bg: var(--clr-bg);
+  --color-surface: var(--clr-surface);
+  --color-surface2: var(--clr-surface2);
+  --color-border-brand: var(--clr-border);
+  --color-primary-text: var(--clr-white);
+  --color-muted-text: var(--clr-gray);
+  --color-muted-strong: var(--clr-gray-lt);
+  --color-accent-brand: var(--clr-accent);
+  --color-accent-dim: var(--clr-accent-dim);
+  --color-gold: var(--clr-gold);
+  --color-gold-dim: var(--clr-gold-dim);
+
+  /* ===== shadcn semantic tokens (mapped to your brand) ===== */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* ===== Your Brand Tokens ===== */
+  --clr-bg: #ffffff;
+  --clr-surface: #f9f9f9;
+  --clr-surface2: #f0f0f0;
+  --clr-border: #e5e5e5;
+  --clr-white: #0a0a0a; /* Primary text */
+  --clr-gray: #707070; /* Muted text */
+  --clr-gray-lt: #4a4a4a; /* Stronger muted */
+  --clr-accent: #000000;
+  --clr-accent-dim: rgba(0, 0, 0, 0.05);
+  --clr-gold: #000000;
+  --clr-gold-dim: rgba(0, 0, 0, 0.04);
+
+  /* ===== shadcn tokens mapped to your pure light monochrome ===== */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  --card: #f9f9f9;
+  --card-foreground: #0a0a0a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f0f0f0;
+  --secondary-foreground: #0a0a0a;
+
+  --muted: #f0f0f0;
+  --muted-foreground: #707070;
+
+  --accent: #f0f0f0;
+  --accent-foreground: #0a0a0a;
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a3a3a3;
+
+  --chart-1: #0a0a0a;
+  --chart-2: #4a4a4a;
+  --chart-3: #707070;
+  --chart-4: #a3a3a3;
+  --chart-5: #d4d4d4;
+
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar: #f9f9f9;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0f0f0;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a3a3a3;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+
+  --card: #141414;
+  --card-foreground: #fafafa;
+
+  --popover: #141414;
+  --popover-foreground: #fafafa;
+
+  --primary: #fafafa;
+  --primary-foreground: #0a0a0a;
+
+  --secondary: #1f1f1f;
+  --secondary-foreground: #fafafa;
+
+  --muted: #1f1f1f;
+  --muted-foreground: #a3a3a3;
+
+  --accent: #1f1f1f;
+  --accent-foreground: #fafafa;
+
+  --destructive: oklch(0.704 0.191 22.216);
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #707070;
+
+  --chart-1: #fafafa;
+  --chart-2: #d4d4d4;
+  --chart-3: #a3a3a3;
+  --chart-4: #707070;
+  --chart-5: #4a4a4a;
+
+  --sidebar: #141414;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #fafafa;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #707070;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-black selection:text-white;
+    font-family: "Manrope Variable", sans-serif;
+  }
+
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+/* Custom Design System & Glassmorphism Utility Classes */
+@layer components {
+  /* Minimal Solid Surface Card */
+  .card-surface {
+    @apply bg-surface border border-border rounded-2xl shadow-xs transition-all duration-200;
+  }
+
+  /* Liquid Glass Panels (Header, Sidebar, Modals) */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--clr-border);
+  }
+
+  /* Liquid Glass Cards */
+  .card-glass {
+    background: rgba(249, 249, 249, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--clr-border);
+    @apply rounded-2xl shadow-xs transition-all duration-200;
+  }
+
+  /* Interactive Buttons */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-black/80 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground border border-border hover:bg-surface2 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--clr-border);
+    @apply text-foreground hover:bg-white/80 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+}
+
+/* Minimalist Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-gray);
+}
