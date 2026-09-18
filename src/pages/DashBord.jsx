@@ -1,16 +1,26 @@
+// pages/DashBord.jsx
+import DashboardCard from "@/components/DashboardCard";
+import LeaderBordList from "@/components/LeaderBordList";
+import Streak from "@/components/Streak";
 import React from "react";
 
 const DashBord = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-bold tracking-tight text-foreground">
-        Dashboard
-      </h1>
-      <p className="text-muted-foreground">
-        Welcome back! Here's what's happening.
-      </p>
+    <div className="flex h-[calc(100vh-64px)] flex-col gap-4 p-4 sm:p-5 overflow-hidden">
+      {/* Top: DashboardCard — fixed height based on content */}
+      <div className="shrink-0">
+        <DashboardCard />
+      </div>
 
-      {/* Your dashboard widgets/content go here */}
+      {/* Bottom: two cards side by side, each takes remaining height */}
+      <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="min-h-0">
+          <LeaderBordList />
+        </div>
+        <div className="min-h-0">
+          <Streak />
+        </div>
+      </div>
     </div>
   );
 };
