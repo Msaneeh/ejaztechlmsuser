@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   Layers,
@@ -54,19 +54,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       >
         <div className="flex w-64 flex-col h-full">
           {/* Sidebar Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-border shrink-0">
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Menu
-            </span>
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-1.5 rounded-lg hover:bg-accent text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Collapse Sidebar"
-            >
-              <PanelRight className="h-5 w-5 rotate-180" />
-            </button>
-          </div>
+      
 
           {/* Navigation Links */}
           <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
@@ -97,6 +85,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
           {/* User Profile & Logout */}
           <div className="p-3 border-t border-border space-y-1 shrink-0">
+            <Link to="/profile">
             <div className="flex items-center gap-3 px-3 py-2">
               <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <User className="h-4 w-4 text-accent-foreground" />
@@ -110,6 +99,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 </span>
               </div>
             </div>
+            </Link>
 
             <button
               onClick={handleLogout}

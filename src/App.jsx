@@ -13,6 +13,7 @@ import Certificates from "./pages/Certificates.jsx";
 import Task from "./pages/Task.jsx";
 import Quizes from "./pages/Quizes.jsx";
 import Settings from "./pages/Settings.jsx";
+import Profile from "./pages/Profile.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/quizzes" element={<Quizes />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
+          <Route path="/profile" element={<Profile />} />
           <Route path="/leaderbord" element={<LeaderBord />} />
           <Route path="/notification" element={<Notification />} />
         </Route>
