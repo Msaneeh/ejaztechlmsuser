@@ -1,4 +1,5 @@
 export const phasesData = [
+  // ==================== PHASE 1 ====================
   {
     id: 1,
     name: "Phase 1: Foundations of AI",
@@ -16,6 +17,13 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 20m",
         status: "completed",
+        objectives: [
+          "Understand what AI, ML, and DL actually mean",
+          "Set up Python and Jupyter for ML work",
+          "Write your first Python scripts and functions",
+          "Work with lists, dicts, and control flow",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/1-1",
       },
       {
         id: "1-2",
@@ -24,6 +32,13 @@ export const phasesData = [
         lessons: 4,
         duration: "4h 10m",
         status: "completed",
+        objectives: [
+          "Create and manipulate NumPy arrays",
+          "Load CSVs and inspect DataFrames with Pandas",
+          "Filter, group, and aggregate tabular data",
+          "Handle missing values and data types",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/1-2",
       },
       {
         id: "1-3",
@@ -32,6 +47,13 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 45m",
         status: "completed",
+        objectives: [
+          "Work with vectors, matrices, and dot products",
+          "Understand mean, variance, and standard deviation",
+          "Interpret correlation and covariance",
+          "Apply basic probability rules",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/1-3",
       },
       {
         id: "1-4",
@@ -40,11 +62,21 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 30m",
         status: "completed",
+        objectives: [
+          "Plot distributions with Matplotlib and Seaborn",
+          "Identify outliers and trends visually",
+          "Build correlation heatmaps",
+          "Write a short EDA summary report",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/1-4",
       },
     ],
     hasEvaluation: true,
     evaluationLink: "https://meet.google.com/abc-defg-hij",
+    quizLink: "/quizzes",
   },
+
+  // ==================== PHASE 2 ====================
   {
     id: 2,
     name: "Phase 2: Supervised Machine Learning",
@@ -62,6 +94,13 @@ export const phasesData = [
         lessons: 4,
         duration: "4h 05m",
         status: "completed",
+        objectives: [
+          "Understand the math behind linear regression",
+          "Implement gradient descent from scratch",
+          "Build a logistic regression classifier",
+          "Evaluate models with MSE and accuracy",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/2-1",
       },
       {
         id: "2-2",
@@ -70,6 +109,13 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 55m",
         status: "in-progress",
+        objectives: [
+          "Understand entropy and Gini impurity",
+          "Train and visualize a decision tree",
+          "Build a random forest and tune tree count",
+          "Compare tree models with logistic regression",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/2-2",
       },
       {
         id: "2-3",
@@ -78,6 +124,13 @@ export const phasesData = [
         lessons: 4,
         duration: "4h 20m",
         status: "locked",
+        objectives: [
+          "Understand the margin and support vectors",
+          "Apply kernel tricks for non-linear data",
+          "Tune C and gamma hyperparameters",
+          "Compare SVM with tree-based models",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/2-3",
       },
       {
         id: "2-4",
@@ -86,12 +139,21 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 40m",
         status: "locked",
+        objectives: [
+          "Split data with train/validation/test",
+          "Use cross-validation properly",
+          "Tune hyperparameters with GridSearchCV",
+          "Interpret precision, recall, F1, and ROC-AUC",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/2-4",
       },
     ],
     hasEvaluation: true,
     evaluationLink: "https://meet.google.com/xyz-uvwx-yz1",
     quizLink: "/quizzes",
   },
+
+  // ==================== PHASE 4 ====================
   {
     id: 3,
     name: "Phase 3: Unsupervised Learning & Deep Learning",
@@ -109,6 +171,13 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 50m",
         status: "locked",
+        objectives: [
+          "Understand centroid-based clustering",
+          "Choose K with the elbow method",
+          "Build dendrograms with hierarchical clustering",
+          "Evaluate clusters with silhouette score",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-1",
       },
       {
         id: "3-2",
@@ -117,6 +186,13 @@ export const phasesData = [
         lessons: 4,
         duration: "3h 30m",
         status: "locked",
+        objectives: [
+          "Understand eigenvectors and variance",
+          "Reduce dimensions with PCA",
+          "Choose the number of components",
+          "Visualize high-dimensional data in 2D",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-2",
       },
       {
         id: "3-3",
@@ -125,6 +201,13 @@ export const phasesData = [
         lessons: 4,
         duration: "4h 15m",
         status: "locked",
+        objectives: [
+          "Understand perceptrons and activation functions",
+          "Build a simple feedforward network",
+          "Implement backpropagation intuition",
+          "Train on a small classification task",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-3",
       },
       {
         id: "3-4",
@@ -133,6 +216,88 @@ export const phasesData = [
         lessons: 4,
         duration: "4h 45m",
         status: "locked",
+        objectives: [
+          "Set up TensorFlow and Keras",
+          "Build and compile a deep network",
+          "Use callbacks for early stopping",
+          "Save, load, and evaluate trained models",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-4",
+      },
+    ],
+    hasEvaluation: true,
+    evaluationLink: "https://meet.google.com/pqr-stuv-wx2",
+    quizLink: "/quizzes",
+  },
+   {
+    id: 4,
+    name: "Phase 4: Unsupervised Learning & Deep Learning",
+    description:
+      "Explore clustering, dimensionality reduction, and neural networks to round out your AI toolkit.",
+    duration: "4 weeks",
+    lessonsCount: 16,
+    status: "locked",
+    progress: 0,
+    weeks: [
+      {
+        id: "4-1",
+        number: 1,
+        title: "K-Means & Hierarchical Clustering",
+        lessons: 4,
+        duration: "3h 50m",
+        status: "locked",
+        objectives: [
+          "Understand centroid-based clustering",
+          "Choose K with the elbow method",
+          "Build dendrograms with hierarchical clustering",
+          "Evaluate clusters with silhouette score",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-1",
+      },
+      {
+        id: "4-2",
+        number: 2,
+        title: "PCA & Dimensionality Reduction",
+        lessons: 4,
+        duration: "3h 30m",
+        status: "locked",
+        objectives: [
+          "Understand eigenvectors and variance",
+          "Reduce dimensions with PCA",
+          "Choose the number of components",
+          "Visualize high-dimensional data in 2D",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-2",
+      },
+      {
+        id: "4-3",
+        number: 3,
+        title: "Intro to Neural Networks",
+        lessons: 4,
+        duration: "4h 15m",
+        status: "locked",
+        objectives: [
+          "Understand perceptrons and activation functions",
+          "Build a simple feedforward network",
+          "Implement backpropagation intuition",
+          "Train on a small classification task",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-3",
+      },
+      {
+        id: "4-4",
+        number: 4,
+        title: "Deep Learning with TensorFlow",
+        lessons: 4,
+        duration: "4h 45m",
+        status: "locked",
+        objectives: [
+          "Set up TensorFlow and Keras",
+          "Build and compile a deep network",
+          "Use callbacks for early stopping",
+          "Save, load, and evaluate trained models",
+        ],
+        lessonLink: "https://ejaztech.com/lessons/3-4",
       },
     ],
     hasEvaluation: true,

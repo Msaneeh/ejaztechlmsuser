@@ -9,7 +9,6 @@ import {
   Settings,
   LogOut,
   User,
-  PanelRight,
 } from "lucide-react";
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -30,7 +29,6 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {/* Mobile backdrop overlay */}
       {isOpen && (
         <div
           onClick={onClose}
@@ -38,7 +36,6 @@ const Sidebar = ({ isOpen, onClose }) => {
         />
       )}
 
-      {/* Sidebar Shell — mobile: fixed slide-in | desktop: static collapse */}
       <aside
         className={`
           fixed md:static top-16 md:top-0 left-0 z-50 md:z-0
@@ -53,10 +50,6 @@ const Sidebar = ({ isOpen, onClose }) => {
         `}
       >
         <div className="flex w-64 flex-col h-full">
-          {/* Sidebar Header */}
-      
-
-          {/* Navigation Links */}
           <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
             {navItems.map((item) => {
               const IconComponent = item.icon;
@@ -65,7 +58,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => {
-                    // close sidebar only on mobile
+                   
                     if (window.innerWidth < 768) onClose();
                   }}
                   className={({ isActive }) =>
@@ -83,7 +76,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             })}
           </nav>
 
-          {/* User Profile & Logout */}
+
           <div className="p-3 border-t border-border space-y-1 shrink-0">
             <Link to="/profile">
             <div className="flex items-center gap-3 px-3 py-2">

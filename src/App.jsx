@@ -14,6 +14,11 @@ import Task from "./pages/Task.jsx";
 import Quizes from "./pages/Quizes.jsx";
 import Settings from "./pages/Settings.jsx";
 import Profile from "./pages/Profile.jsx";
+import TaskSubmit from "./pages/TaskSubmit.jsx";
+import QuizTake from "./pages/QuizTake.jsx";
+import QuizResult from "./pages/QuizResult.jsx";
+
+
 
 function App() {
   return (
@@ -21,8 +26,6 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<Auth />} />
-
-        {/* Everything nested here requires login */}
         <Route element={<ProtectedRoute />}>
           <Route element={<DashboardLayout />}>
             <Route path="/dashbord" element={<DashBord />} />
@@ -32,6 +35,9 @@ function App() {
             <Route path="/quizzes" element={<Quizes />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
+          <Route path="/tasks/:taskId" element={<TaskSubmit />} />
+          <Route path="/quizzes/:quizId" element={<QuizTake />} />
+          <Route path="/quizzes/:quizId/result" element={<QuizResult />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/leaderbord" element={<LeaderBord />} />
           <Route path="/notification" element={<Notification />} />

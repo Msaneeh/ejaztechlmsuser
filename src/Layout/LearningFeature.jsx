@@ -1,81 +1,111 @@
-import React from 'react'
+import { BookOpen, Users, Code2, Globe2 } from "lucide-react";
 
 const LearningFeature = () => {
   return (
-        <section className="py-20 border-b border-border bg-surface">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              <div className="lg:col-span-6 space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-background text-xs font-semibold text-foreground">
-                  <span>🌐</span>
-                  <span>About Ejaztech</span>
-                </div>
-                
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground leading-tight">
-                  Bridging the Digital Talent & Intelligence Gap Across Africa
-                </h2>
-                
-                <p className="text-base text-muted-text leading-relaxed">
-                  Ejaztech is an emerging technology enterprise dedicated to advancing digital literacy, artificial intelligence training, and capacity building. We combine structured technical curriculum with practical project development to turn ambitious learners into job-ready tech professionals.
-                </p>
-                
-                <p className="text-base text-muted-text leading-relaxed">
-                  Through localized AI research, data curation, and immersive training tracks, we empower developers and hardware builders to design high-impact solutions for regional and global markets.
-                </p>
+    <section className="py-20 border-b border-border bg-surface">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div className="grid grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-xl border border-border bg-background">
-                    <h4 className="text-2xl font-bold text-foreground">1,000+</h4>
-                    <p className="text-xs text-muted-text font-medium mt-1">Learners Impacted</p>
-                  </div>
-                  <div className="p-4 rounded-xl border border-border bg-background">
-                    <h4 className="text-2xl font-bold text-foreground">95%</h4>
-                    <p className="text-xs text-muted-text font-medium mt-1">Practical Execution Rate</p>
-                  </div>
-                </div>
-              </div>
+        {/* Section Header */}
+        <div className="max-w-2xl mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-background text-xs font-semibold text-foreground">
+            <BookOpen className="h-3.5 w-3.5" />
+            <span>Learning Experience</span>
+          </div>
 
-              <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <div className="p-6 rounded-2xl bg-background border border-border space-y-3">
-                  <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center text-lg">
-                    💻
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground">AI & Hardware Lab</h3>
-                  <p className="text-xs text-muted-text leading-relaxed">
-                    Specialized training in embedded systems, microcontrollers, machine learning models, and practical IoT engineering.
-                  </p>
-                </div>
+          <h2 className="mt-5 text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground leading-tight">
+            More Than Courses.{" "}
+            <span className="text-muted-text">
+              A Practical Learning Experience.
+            </span>
+          </h2>
 
-                <div className="p-6 rounded-2xl bg-background border border-border space-y-3">
-                  <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center text-lg">
-                    👥
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground">Cohort Mentorship</h3>
-                  <p className="text-xs text-muted-text leading-relaxed">
-                    Learn together in structured batches with weekly phase deliverables, direct code reviews, and mentor check-ins.
-                  </p>
-                </div>
+          <p className="mt-5 text-base text-muted-text leading-relaxed">
+            Learn through structured lessons, hands-on practice, mentorship,
+            and projects that help you move from understanding concepts to
+            actually building with AI.
+          </p>
+        </div>
 
-                <div className="p-6 rounded-2xl bg-background border border-border space-y-3 sm:col-span-2">
-                  <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center text-lg">
-                    🎯
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground">Mission-Driven Ecosystem</h3>
-                  <p className="text-xs text-muted-text leading-relaxed">
-                    Connecting tech talents directly to startup opportunities, software engineering projects, and research initiatives.
-                  </p>
-                </div>
+        {/* Features */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-              </div>
-
+          {/* Structured Learning */}
+          <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
+            <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
+              <BookOpen className="h-5 w-5" />
             </div>
 
-          </div>
-        </section>
-  )
-}
+            <div>
+              <h3 className="text-base font-semibold text-foreground">
+                Structured Learning
+              </h3>
 
-export default LearningFeature
+              <p className="mt-2 text-xs text-muted-text leading-relaxed">
+                Follow organized learning paths that take you from
+                foundational concepts to practical AI development.
+              </p>
+            </div>
+          </div>
+
+          {/* Hands-on Practice */}
+          <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
+            <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
+              <Code2 className="h-5 w-5" />
+            </div>
+
+            <div>
+              <h3 className="text-base font-semibold text-foreground">
+                Hands-on Projects
+              </h3>
+
+              <p className="mt-2 text-xs text-muted-text leading-relaxed">
+                Apply what you learn through practical labs, exercises,
+                and real-world AI projects instead of theory alone.
+              </p>
+            </div>
+          </div>
+
+          {/* Mentorship */}
+          <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
+            <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
+              <Users className="h-5 w-5" />
+            </div>
+
+            <div>
+              <h3 className="text-base font-semibold text-foreground">
+                Mentor Support
+              </h3>
+
+              <p className="mt-2 text-xs text-muted-text leading-relaxed">
+                Learn with guidance from mentors through cohort activities,
+                project support, feedback, and collaborative learning.
+              </p>
+            </div>
+          </div>
+
+          {/* African Context */}
+          <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
+            <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
+              <Globe2 className="h-5 w-5" />
+            </div>
+
+            <div>
+              <h3 className="text-base font-semibold text-foreground">
+                African Context
+              </h3>
+
+              <p className="mt-2 text-xs text-muted-text leading-relaxed">
+                Explore AI applications, datasets, and challenges connected
+                to real problems across African communities.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default LearningFeature;

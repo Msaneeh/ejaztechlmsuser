@@ -1,0 +1,143 @@
+export const quizzesData = [
+  {
+    id: "phase-1-quiz",
+    phase: "Phase 1: Foundations of AI",
+    description: "Test your understanding of Python, NumPy, Pandas, and EDA basics.",
+    questionsCount: 5,
+    duration: "15 min",
+    passingScore: 60,
+    status: "completed", // "completed" | "available" | "locked"
+    lastScore: 85,
+    lastAttemptDate: "2026-08-20T14:30:00Z",
+    attemptsUsed: 1,
+    attemptsAllowed: 1,
+    questions: [
+      {
+        id: "q1",
+        question: "Which library is primarily used for numerical operations in Python?",
+        options: ["NumPy", "Flask", "Django", "Requests"],
+        correctIndex: 0,
+      },
+      {
+        id: "q2",
+        question: "What does Pandas primarily provide?",
+        options: [
+          "Web scraping tools",
+          "DataFrames for tabular data",
+          "Image processing",
+          "Neural networks",
+        ],
+        correctIndex: 1,
+      },
+      {
+        id: "q3",
+        question: "Which plot is best for showing distribution of a single variable?",
+        options: ["Line plot", "Histogram", "Pie chart", "Scatter plot"],
+        correctIndex: 1,
+      },
+      {
+        id: "q4",
+        question: "What does EDA stand for?",
+        options: [
+          "Event-Driven Architecture",
+          "Exploratory Data Analysis",
+          "External Data Access",
+          "Encrypted Data Algorithm",
+        ],
+        correctIndex: 1,
+      },
+      {
+        id: "q5",
+        question: "Which of these is a Python list comprehension?",
+        options: [
+          "[x for x in range(5)]",
+          "list(x : range(5))",
+          "for x in range(5) yield x",
+          "range(5).map(x)",
+        ],
+        correctIndex: 0,
+      },
+    ],
+  },
+  {
+    id: "phase-2-quiz",
+    phase: "Phase 2: Supervised Machine Learning",
+    description:
+      "Covers regression, classification, decision trees, and model evaluation.",
+    questionsCount: 5,
+    duration: "20 min",
+    passingScore: 60,
+    status: "available",
+    lastScore: null,
+    lastAttemptDate: null,
+    attemptsUsed: 0,
+    attemptsAllowed: 1,
+    questions: [
+      {
+        id: "q1",
+        question: "What does linear regression predict?",
+        options: [
+          "A categorical label",
+          "A continuous numeric value",
+          "A probability",
+          "A cluster",
+        ],
+        correctIndex: 1,
+      },
+      {
+        id: "q2",
+        question: "Which algorithm uses entropy or Gini impurity?",
+        options: [
+          "Linear Regression",
+          "Logistic Regression",
+          "Decision Tree",
+          "K-Means",
+        ],
+        correctIndex: 2,
+      },
+      {
+        id: "q3",
+        question: "What is overfitting?",
+        options: [
+          "Model performs well on training but poorly on new data",
+          "Model performs poorly on training data",
+          "Model has too few parameters",
+          "Model is too simple",
+        ],
+        correctIndex: 0,
+      },
+      {
+        id: "q4",
+        question: "Which metric is best for imbalanced classification?",
+        options: ["Accuracy", "F1 Score", "MSE", "R²"],
+        correctIndex: 1,
+      },
+      {
+        id: "q5",
+        question: "Random Forest is an ensemble of…",
+        options: [
+          "Neural networks",
+          "Decision trees",
+          "Support vectors",
+          "Clusters",
+        ],
+        correctIndex: 1,
+      },
+    ],
+  },
+  {
+    id: "phase-3-quiz",
+    phase: "Phase 3: Unsupervised & Deep Learning",
+    description:
+      "Clustering, PCA, and an introduction to neural networks.",
+    questionsCount: 5,
+    duration: "20 min",
+    passingScore: 60,
+    status: "locked",
+    lastScore: null,
+    lastAttemptDate: null,
+    attemptsUsed: 0,
+    attemptsAllowed: 1,
+    questions: [],
+  },
+];

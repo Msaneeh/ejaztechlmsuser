@@ -12,7 +12,6 @@ const Navbar = ({ onToggleSidebar, isSidebarOpen }) => {
     <header className="sticky top-0 z-40 w-full glass-panel border-b border-border bg-background/80 backdrop-blur-md shrink-0">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
-          {/* Sidebar Toggle — visible on all screen sizes when logged in */}
           {isLoggedIn && (
             <button
               type="button"
