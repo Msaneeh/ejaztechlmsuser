@@ -42,9 +42,9 @@ export const settingsData = {
   },
 
   appearance: {
-    theme: "system", // "light" | "dark" | "system"
-    reducedMotion: false,
-    compactMode: false,
+    
+  reducedMotion: false,
+  compactMode: false,
   },
 };
 

@@ -1,3 +1,4 @@
+import { Link as LinkIcon, Copy, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -14,7 +15,7 @@ const ShareCertificateModal = ({ open, cert, copied, onCopy, onClose }) => {
       <DialogContent className="glass-panel max-w-md rounded-[1.75rem] border-border-brand">
         <DialogHeader>
           <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 text-xl text-gold">
-            🔗
+            <LinkIcon />
           </div>
           <DialogTitle className="text-center text-lg font-semibold tracking-tight text-primary-text">
             Share your achievement
@@ -44,13 +45,13 @@ const ShareCertificateModal = ({ open, cert, copied, onCopy, onClose }) => {
             rel="noreferrer"
             className="btn-glass flex h-10 items-center justify-center gap-2 rounded-xl text-xs font-medium"
           >
-            🐦 Twitter
+            <X />Twitter
           </a>
         </div>
 
         {/* Copy link row */}
-        <div className="mt-3 flex items-center gap-2 rounded-2xl border border-border-brand bg-surface2 p-2 pl-3">
-          <span className="shrink-0 text-sm">🔗</span>
+       <div className="mt-3 flex items-center gap-2 rounded-2xl border border-border-brand bg-surface2 p-2 pl-3">
+          <LinkIcon className="h-3.5 w-3.5 shrink-0 text-muted-text" />
           <span className="min-w-0 flex-1 truncate text-xs text-muted-text">
             {cert?.verificationUrl}
           </span>
@@ -59,7 +60,17 @@ const ShareCertificateModal = ({ open, cert, copied, onCopy, onClose }) => {
             size="sm"
             className="btn-primary h-7 shrink-0 rounded-full px-3 text-[11px] font-medium"
           >
-            {copied ? "✓ Copied" : "Copy"}
+            {copied ? (
+              <>
+                <Check className="mr-1 h-3 w-3" />
+                Copied
+              </>
+            ) : (
+              <>
+                <Copy className="mr-1 h-3 w-3" />
+                Copy
+              </>
+            )}
           </Button>
         </div>
 

@@ -153,7 +153,7 @@ export const phasesData = [
     quizLink: "/quizzes",
   },
 
-  // ==================== PHASE 4 ====================
+  // ==================== PHASE 3 ====================
   {
     id: 3,
     name: "Phase 3: Unsupervised Learning & Deep Learning",
@@ -211,81 +211,6 @@ export const phasesData = [
       },
       {
         id: "3-4",
-        number: 4,
-        title: "Deep Learning with TensorFlow",
-        lessons: 4,
-        duration: "4h 45m",
-        status: "locked",
-        objectives: [
-          "Set up TensorFlow and Keras",
-          "Build and compile a deep network",
-          "Use callbacks for early stopping",
-          "Save, load, and evaluate trained models",
-        ],
-        lessonLink: "https://ejaztech.com/lessons/3-4",
-      },
-    ],
-    hasEvaluation: true,
-    evaluationLink: "https://meet.google.com/pqr-stuv-wx2",
-    quizLink: "/quizzes",
-  },
-   {
-    id: 4,
-    name: "Phase 4: Unsupervised Learning & Deep Learning",
-    description:
-      "Explore clustering, dimensionality reduction, and neural networks to round out your AI toolkit.",
-    duration: "4 weeks",
-    lessonsCount: 16,
-    status: "locked",
-    progress: 0,
-    weeks: [
-      {
-        id: "4-1",
-        number: 1,
-        title: "K-Means & Hierarchical Clustering",
-        lessons: 4,
-        duration: "3h 50m",
-        status: "locked",
-        objectives: [
-          "Understand centroid-based clustering",
-          "Choose K with the elbow method",
-          "Build dendrograms with hierarchical clustering",
-          "Evaluate clusters with silhouette score",
-        ],
-        lessonLink: "https://ejaztech.com/lessons/3-1",
-      },
-      {
-        id: "4-2",
-        number: 2,
-        title: "PCA & Dimensionality Reduction",
-        lessons: 4,
-        duration: "3h 30m",
-        status: "locked",
-        objectives: [
-          "Understand eigenvectors and variance",
-          "Reduce dimensions with PCA",
-          "Choose the number of components",
-          "Visualize high-dimensional data in 2D",
-        ],
-        lessonLink: "https://ejaztech.com/lessons/3-2",
-      },
-      {
-        id: "4-3",
-        number: 3,
-        title: "Intro to Neural Networks",
-        lessons: 4,
-        duration: "4h 15m",
-        status: "locked",
-        objectives: [
-          "Understand perceptrons and activation functions",
-          "Build a simple feedforward network",
-          "Implement backpropagation intuition",
-          "Train on a small classification task",
-        ],
-        lessonLink: "https://ejaztech.com/lessons/3-3",
-      },
-      {
-        id: "4-4",
         number: 4,
         title: "Deep Learning with TensorFlow",
         lessons: 4,

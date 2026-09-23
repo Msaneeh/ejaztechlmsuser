@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Download, Link, Verified } from "lucide-react";
 
 const CertificateActions = ({ onDownload, onShare, onVerify }) => {
   return (
@@ -7,14 +8,14 @@ const CertificateActions = ({ onDownload, onShare, onVerify }) => {
         onClick={onDownload}
         className="btn-primary h-9 rounded-full px-4 text-xs font-medium"
       >
-        ⬇️ Download PDF
+        <Download /> Download PDF
       </Button>
 
       <Button
         onClick={onShare}
         className="btn-glass h-9 rounded-full px-4 text-xs font-medium"
       >
-        🔗 Share
+        <Link /> Share
       </Button>
 
       <Button
@@ -22,7 +23,7 @@ const CertificateActions = ({ onDownload, onShare, onVerify }) => {
         onClick={onVerify}
         className="btn-glass h-9 rounded-full px-4 text-xs font-medium"
       >
-        ✅ Verify
+        <Verified /> Verify
       </Button>
     </div>
   );

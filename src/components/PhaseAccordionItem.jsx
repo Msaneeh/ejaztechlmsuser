@@ -40,7 +40,7 @@ const statusConfig = {
   },
 };
 
-const PhaseAccordionItem = ({ phase, onJoinEvaluation }) => {
+const PhaseAccordionItem = ({ phase, onJoinEvaluation, onOpenWeek }) => {
   const navigate = useNavigate();
   const s = statusConfig[phase.status] || statusConfig.locked;
   const StatusIcon = s.icon;
@@ -111,8 +111,7 @@ const PhaseAccordionItem = ({ phase, onJoinEvaluation }) => {
             <PhaseWeekRow
               key={week.id}
               week={week}
-              onClick={() =>
-                navigate(`/phase/${phase.id}/week/${week.id}`)
+              onClick={() => onOpenWeek(week, phase.name)
               }
             />
           ))}
