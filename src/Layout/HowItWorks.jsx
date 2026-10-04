@@ -1,9 +1,31 @@
 const HowItWorks = () => {
+
+  const LearningSteps = [
+    {
+      id: 1,
+      step: "01",
+      title: "Choose a Program",
+      desc: "Explore available learning programs and mentorshipopportunities, then choose the one that matches your learning goals."
+    },
+    {
+      id: 2,
+      step: "02",
+      title: "Learn & Practice",
+      desc: "Work through structured lessons, practical exercises, hands-on labs, and learning activities designed to build your understanding step by step."
+    },
+    {
+      id: 3,
+      step: "03",
+      title: "Build & Complete",
+      desc: "Apply your knowledge through projects and practical challenges, collaborate with other learners, and work toward completing your program."
+    },
+  ];
+  
   return (
     <section className="py-20 border-b border-border bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-        {/* Section Header */}
+       
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <div className="inline-flex items-center px-3 py-1 rounded-full border border-border bg-background text-xs font-semibold text-foreground">
             Your Learning Journey
@@ -20,66 +42,26 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* Steps */}
+    
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
 
-          {/* Step 01 */}
-          <div className="space-y-4 p-6 rounded-2xl bg-background border border-border relative">
+            {LearningSteps.map((steps) => (
+            <div key={steps.id} className="space-y-4 p-6 rounded-2xl bg-background border border-border relative">
             <div className="text-3xl font-black text-muted-text/30">
-              01
+              {steps.step}
             </div>
 
             <div>
               <h4 className="text-lg font-semibold text-foreground">
-                Choose a Program
+                {steps.title}
               </h4>
-
               <p className="mt-2 text-sm text-muted-text leading-relaxed">
-                Explore available learning programs and mentorship
-                opportunities, then choose the one that matches your
-                learning goals.
+                {steps.desc}
               </p>
             </div>
-          </div>
-
-          {/* Step 02 */}
-          <div className="space-y-4 p-6 rounded-2xl bg-background border border-border relative">
-            <div className="text-3xl font-black text-muted-text/30">
-              02
             </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-foreground">
-                Learn & Practice
-              </h4>
-
-              <p className="mt-2 text-sm text-muted-text leading-relaxed">
-                Work through structured lessons, practical exercises,
-                hands-on labs, and learning activities designed to build
-                your understanding step by step.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 03 */}
-          <div className="space-y-4 p-6 rounded-2xl bg-background border border-border relative">
-            <div className="text-3xl font-black text-muted-text/30">
-              03
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-foreground">
-                Build & Complete
-              </h4>
-
-              <p className="mt-2 text-sm text-muted-text leading-relaxed">
-                Apply your knowledge through projects and practical
-                challenges, collaborate with other learners, and work
-                toward completing your program.
-              </p>
-            </div>
-          </div>
-
+            ))}
+        
         </div>
 
       </div>

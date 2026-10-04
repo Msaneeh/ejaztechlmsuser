@@ -9,7 +9,7 @@ const QuizResult = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  // Fallback if user navigates here directly without state
+  
   const score = state?.score ?? 0;
   const correct = state?.correct ?? 0;
   const total = state?.total ?? 0;

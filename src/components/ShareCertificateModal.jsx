@@ -25,7 +25,7 @@ const ShareCertificateModal = ({ open, cert, copied, onCopy, onClose }) => {
           </DialogDescription>
         </DialogHeader>
 
-        {/* Social share options */}
+        
         <div className="mt-2 grid grid-cols-2 gap-2">
           <a
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
@@ -49,7 +49,7 @@ const ShareCertificateModal = ({ open, cert, copied, onCopy, onClose }) => {
           </a>
         </div>
 
-        {/* Copy link row */}
+        
        <div className="mt-3 flex items-center gap-2 rounded-2xl border border-border-brand bg-surface2 p-2 pl-3">
           <LinkIcon className="h-3.5 w-3.5 shrink-0 text-muted-text" />
           <span className="min-w-0 flex-1 truncate text-xs text-muted-text">

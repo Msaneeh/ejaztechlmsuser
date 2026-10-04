@@ -5,7 +5,7 @@ const LearningFeature = () => {
     <section className="py-20 border-b border-border bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section Header */}
+        
         <div className="max-w-2xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-background text-xs font-semibold text-foreground">
             <BookOpen className="h-3.5 w-3.5" />
@@ -26,10 +26,10 @@ const LearningFeature = () => {
           </p>
         </div>
 
-        {/* Features */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-          {/* Structured Learning */}
+          
           <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
             <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
               <BookOpen className="h-5 w-5" />
@@ -47,7 +47,7 @@ const LearningFeature = () => {
             </div>
           </div>
 
-          {/* Hands-on Practice */}
+          
           <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
             <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
               <Code2 className="h-5 w-5" />
@@ -65,7 +65,7 @@ const LearningFeature = () => {
             </div>
           </div>
 
-          {/* Mentorship */}
+          
           <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
             <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
               <Users className="h-5 w-5" />
@@ -83,7 +83,7 @@ const LearningFeature = () => {
             </div>
           </div>
 
-          {/* African Context */}
+          
           <div className="p-6 rounded-2xl bg-background border border-border space-y-4">
             <div className="h-11 w-11 rounded-xl bg-surface border border-border flex items-center justify-center">
               <Globe2 className="h-5 w-5" />

@@ -29,7 +29,7 @@ const WeekDetailModal = ({ open, week, phaseName, onClose, onStartLesson }) => {
           </DialogDescription>
         </DialogHeader>
 
-        {/* Meta row */}
+        
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-[11px] text-muted-text">
           <span className="flex items-center gap-1">
             <BookOpen className="h-3 w-3" />
@@ -41,7 +41,7 @@ const WeekDetailModal = ({ open, week, phaseName, onClose, onStartLesson }) => {
           </span>
         </div>
 
-        {/* What you'll learn */}
+        
         <div className="mt-4 rounded-2xl border border-border-brand bg-surface2/60 p-3">
           <p className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-muted-text">
             What you'll learn

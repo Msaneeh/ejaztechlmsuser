@@ -1,22 +1,22 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-const LandingPage = lazy(() => import("./pages/LandingPage"));
-import Auth from "./pages/Auth.jsx";
-import DashBord from "./pages/DashBord.jsx";
-import DashboardLayout from "./Layout/DashboardLayout.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import LeaderBord from "./pages/LeaderBord.jsx";
-import Notification from "./pages/Notification.jsx";
-import Phase from "./pages/Phase.jsx"; 
-import Certificates from "./pages/Certificates.jsx";
-import Task from "./pages/Task.jsx";
-import Quizes from "./pages/Quizes.jsx";
-import Settings from "./pages/Settings.jsx";
-import Profile from "./pages/Profile.jsx";
-import TaskSubmit from "./pages/TaskSubmit.jsx";
-import QuizTake from "./pages/QuizTake.jsx";
-import QuizResult from "./pages/QuizResult.jsx";
+import LandingPage from "./pages/LandingPage";
+const Auth = lazy(() => import("./pages/Auth.jsx"));
+const DashBord = lazy(() => import("./pages/DashBord.jsx"));
+const DashboardLayout = lazy(() => import("./Layout/DashboardLayout.jsx"));
+const ProtectedRoute = lazy(() => import("./components/ProtectedRoute.jsx"));
+const LeaderBord = lazy(() => import("./pages/LeaderBord.jsx"));
+const Notification = lazy(() => import("./pages/Notification.jsx"));
+const Phase = lazy(() => import("./pages/Phase.jsx")); 
+const Certificates = lazy(() => import("./pages/Certificates.jsx"));
+const Task = lazy(() => import("./pages/Task.jsx"));
+const Quizes = lazy(() => import("./pages/Quizes.jsx"));
+const Settings = lazy(() => import("./pages/Settings.jsx"));
+const Profile = lazy(() => import("./pages/Profile.jsx"));
+const TaskSubmit = lazy(() => import("./pages/TaskSubmit.jsx"));
+const QuizTake = lazy(() => import("./pages/QuizTake.jsx"));
+const QuizResult = lazy(() => import("./pages/QuizResult.jsx"));
 
 
 

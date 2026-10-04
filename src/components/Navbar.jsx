@@ -32,7 +32,7 @@ const Navbar = ({ onToggleSidebar, isSidebarOpen }) => {
             <img
               src="/logo.jpg"
               alt="Company Logo"
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain rounded-full"
             />
             <span className="text-lg font-bold tracking-tight text-foreground">
               Ejaztech LMS

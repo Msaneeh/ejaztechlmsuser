@@ -53,7 +53,7 @@ const Settings = () => {
   };
 
   const handlePasswordSubmit = () => {
-    // TODO: PATCH /api/users/me/password
+    
     console.log("Password change requested");
     setShowChangePassword(false);
     setPasswordForm({ current: "", next: "", confirm: "" });
@@ -61,7 +61,7 @@ const Settings = () => {
   };
 
   const handleDeleteAccount = () => {
-    // TODO: DELETE /api/users/me
+    
     console.log("Account deleted");
     setShowDelete(false);
     navigate("/auth");
@@ -71,7 +71,7 @@ const Settings = () => {
     <div className="flex h-full flex-col gap-4 overflow-hidden p-4 sm:p-6 lg:p-8">
       <SettingsHeader saved={saved} onBack={() => navigate(-1)} />
 
-      {/* Tabs wrapper */}
+      
       <div className="glass-panel relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] shadow-xs">
         <div className="pointer-events-none absolute -left-10 -top-16 h-48 w-48 rounded-full bg-accent-dim blur-[50px]" />
         <div className="pointer-events-none absolute -bottom-20 -right-12 h-60 w-60 rounded-full bg-gold-dim blur-[50px]" />
@@ -83,7 +83,7 @@ const Settings = () => {
         >
           <SettingsTabs />
 
-          {/* Scrollable content */}
+         
           <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
             <TabsContent value="account" className="mt-0">
               <AccountSection
@@ -110,7 +110,7 @@ const Settings = () => {
             </TabsContent>
           </div>
 
-          {/* Footer save bar */}
+          
           <div className="shrink-0 border-t border-border-brand p-3 sm:p-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="text-[11px] text-muted-text">
@@ -135,10 +135,10 @@ const Settings = () => {
         </Tabs>
       </div>
 
-      {/* Danger Zone */}
+     
       <DangerZone onDeleteClick={() => setShowDelete(true)} />
 
-      {/* Modals */}
+      
       <ChangePasswordModal
         open={showChangePassword}
         onClose={() => setShowChangePassword(false)}

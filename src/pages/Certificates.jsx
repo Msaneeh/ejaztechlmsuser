@@ -10,7 +10,7 @@ const Certificates = () => {
 
   const [shareCert, setShareCert] = useState(null);
   const [copied, setCopied] = useState(false);
-  const [expanded, setExpanded] = useState(1); // Phase 1 open by default
+  const [expanded, setExpanded] = useState(1); 
 
   const toggle = (id) => setExpanded((prev) => (prev === id ? null : id));
 
@@ -21,7 +21,7 @@ const Certificates = () => {
   };
 
   const handleDownload = (cert) => {
-    // Placeholder — hook up to a real PDF generator later
+   
     console.log("Downloading certificate:", cert.credentialId);
   };
 

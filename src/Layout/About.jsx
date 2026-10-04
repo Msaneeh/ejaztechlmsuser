@@ -7,7 +7,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-          {/* About Content */}
+          
           <div className="lg:col-span-6 space-y-6">
 
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-background text-xs font-semibold text-foreground">
@@ -32,7 +32,7 @@ const About = () => {
               into practical skills.
             </p>
 
-            {/* Impact Stats */}
+            
             <div className="grid grid-cols-2 gap-4 pt-2">
               <div className="p-4 rounded-xl border border-border bg-background">
                 <h4 className="text-2xl font-bold text-foreground">
@@ -54,10 +54,10 @@ const About = () => {
             </div>
           </div>
 
-          {/* Learning Features */}
+          
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            {/* Practical Learning */}
+            
             <div className="p-6 rounded-2xl bg-background border border-border space-y-3">
               <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center">
                 <Laptop className="h-5 w-5" />
@@ -74,7 +74,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Mentorship */}
+            
             <div className="p-6 rounded-2xl bg-background border border-border space-y-3">
               <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center">
                 <UserGroup className="h-5 w-5" />
@@ -91,7 +91,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* African Context */}
+            
             <div className="p-6 rounded-2xl bg-background border border-border space-y-3 sm:col-span-2">
               <div className="h-10 w-10 rounded-xl bg-surface border border-border flex items-center justify-center">
                 <Goal className="h-5 w-5" />

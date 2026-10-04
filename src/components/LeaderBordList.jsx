@@ -13,7 +13,7 @@ const LeaderBordList = () => {
     { rank: 5, name: "Tunde A.", xp: 1540, isUser: false },
     { rank: 6, name: "Ngozi K.", xp: 1420, isUser: false },
     { rank: 7, name: "Ibrahim M.", xp: 1300, isUser: false },
-  ];
+  ]; 
 
   return (
     <div className="glass-panel relative flex h-full flex-col overflow-hidden rounded-[2rem] p-4 sm:p-5 shadow-xs">

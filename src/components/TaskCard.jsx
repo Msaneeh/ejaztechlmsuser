@@ -1,10 +1,11 @@
-import { HourglassCog, Inbox, Check, ChevronDown } from "lucide-react";
+import { HourglassCog, Inbox, Check, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import TaskRequirements from "./TaskRequirements";
 import TaskSubmissionSummary from "./TaskSubmissionSummary";
 
-// Store icon references, not instantiated JSX — enables consistent sizing
+
+
 const statusConfig = {
   pending: {
     label: "Pending",
@@ -32,7 +33,6 @@ const TaskCard = ({ task, isOpen, onToggle, onSubmit }) => {
       <div className="pointer-events-none absolute -left-10 -top-16 h-48 w-48 rounded-full bg-accent-dim blur-[50px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-12 h-60 w-60 rounded-full bg-gold-dim blur-[50px]" />
 
-      {/* Header — click to expand */}
       <button
         type="button"
         onClick={() => onToggle(task.id)}
@@ -81,7 +81,7 @@ const TaskCard = ({ task, isOpen, onToggle, onSubmit }) => {
         />
       </button>
 
-      {/* Expanded content */}
+      
       {isOpen && (
         <div className="relative z-10 px-4 pb-4 sm:px-5 sm:pb-5">
           <p className="text-sm text-muted-text">{task.description}</p>
@@ -95,7 +95,7 @@ const TaskCard = ({ task, isOpen, onToggle, onSubmit }) => {
               className="btn-primary h-9 rounded-full px-4 text-xs font-medium"
             >
               {task.submission ? "View / Edit Submission" : "Submit Task"}
-              <span className="ml-1.5">→</span>
+              <span className="ml-1.5"><ArrowRight /></span>
             </Button>
           </div>
         </div>

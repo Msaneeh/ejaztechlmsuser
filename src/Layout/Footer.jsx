@@ -8,10 +8,10 @@ const Footer = () => {
     <footer className="border-t border-border bg-surface pt-12 sm:pt-16 pb-8 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Top Section */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 sm:pb-12 border-b border-border">
 
-          {/* Brand Profile */}
+         
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
               <span className="font-extrabold text-foreground text-xl tracking-tight">
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter */}
+          
           <div className="lg:col-span-7 bg-background p-5 sm:p-6 rounded-2xl border border-border">
             <div className="space-y-1 mb-4">
               <h4 className="text-sm font-bold text-foreground">
@@ -79,10 +79,10 @@ const Footer = () => {
 
         </div>
 
-        {/* Sitemap */}
+        
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 py-10 sm:py-12">
 
-          {/* Programs */}
+          
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-foreground uppercase tracking-wider">
               Programs
@@ -121,7 +121,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Platform */}
+          
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-foreground uppercase tracking-wider">
               Platform
@@ -160,7 +160,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-foreground uppercase tracking-wider">
               Resources
@@ -199,7 +199,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social */}
+          
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-foreground uppercase tracking-wider">
               Connect
@@ -257,7 +257,7 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
+        
         <div className="pt-6 sm:pt-8 border-t border-border flex flex-col md:flex-row items-center md:items-center justify-between gap-5 text-xs text-muted-text">
 
           <p className="text-center md:text-left">

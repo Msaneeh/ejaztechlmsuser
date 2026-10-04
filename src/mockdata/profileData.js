@@ -4,7 +4,7 @@ export const profileData = {
   email: "sani@example.com",
   username: "sani_ai",
   bio: "Aspiring ML engineer. Currently deep-diving into supervised learning.",
-  avatar: null, // swap for a URL later
+  avatar: null, 
   location: "Kano, Nigeria",
   joinedDate: "2026-06-01",
   role: "Student",

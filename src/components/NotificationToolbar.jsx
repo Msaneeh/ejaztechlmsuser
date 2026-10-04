@@ -28,7 +28,7 @@ const NotificationToolbar = ({
 
   return (
     <div className="flex shrink-0 flex-wrap items-center justify-between gap-3">
-      {/* Filter tabs */}
+      
       <Tabs value={filter} onValueChange={onFilterChange}>
         <TabsList className="rounded-full border border-border-brand bg-surface2 p-1">
           {filters.map((f) => (
@@ -48,7 +48,7 @@ const NotificationToolbar = ({
         </TabsList>
       </Tabs>
 
-      {/* Bulk actions */}
+      
       <div className="flex items-center gap-2">
         <Tooltip>
           <TooltipTrigger asChild>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import {   Video, ExternalLink } from "lucide-react";
+import { Video, ExternalLink } from "lucide-react";
 import {
   Dialog,
   DialogContent,

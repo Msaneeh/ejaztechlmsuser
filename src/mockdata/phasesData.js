@@ -1,5 +1,5 @@
 export const phasesData = [
-  // ==================== PHASE 1 ====================
+  
   {
     id: 1,
     name: "Phase 1: Foundations of AI",
@@ -76,7 +76,7 @@ export const phasesData = [
     quizLink: "/quizzes",
   },
 
-  // ==================== PHASE 2 ====================
+  
   {
     id: 2,
     name: "Phase 2: Supervised Machine Learning",
@@ -153,7 +153,7 @@ export const phasesData = [
     quizLink: "/quizzes",
   },
 
-  // ==================== PHASE 3 ====================
+  
   {
     id: 3,
     name: "Phase 3: Unsupervised Learning & Deep Learning",
@@ -231,7 +231,7 @@ export const phasesData = [
   },
 ];
 
-// Final capstone project shown at the very bottom of the page
+
 export const capstoneProject = {
   title: "Capstone Project: AI in the Real World",
   description:

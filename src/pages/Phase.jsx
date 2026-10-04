@@ -11,29 +11,26 @@ import { phasesData, capstoneProject } from "@/mockdata/phasesData";
 const Phase = () => {
   const navigate = useNavigate();
 
-  // Modal state
+  
   const [evalLink, setEvalLink] = useState(null);
-  const [selectedWeek, setSelectedWeek] = useState(null);      // week object
-  const [selectedPhase, setSelectedPhase] = useState(null);    // phase name
+  const [selectedWeek, setSelectedWeek] = useState(null);      
+  const [selectedPhase, setSelectedPhase] = useState(null);    
 
-  const handleOpenWeek = (week, phaseName) => {
+  const openWeekHandler = (week, phaseName) => {
     setSelectedWeek(week);
     setSelectedPhase(phaseName);
   };
 
-  const handleCloseWeek = () => {
+  const closeWeekHandler = () => {
     setSelectedWeek(null);
     setSelectedPhase(null);
   };
 
   const handleStartLesson = (link) => {
-    // Option 1: navigate inside the app
-    // navigate(`/lesson/${...}`);
 
-    // Option 2: open external URL
     window.open(link, "_blank");
 
-    handleCloseWeek();
+    closeWeekHandler();
   };
 
   return (
@@ -47,7 +44,7 @@ const Phase = () => {
               key={phase.id}
               phase={phase}
               onJoinEvaluation={setEvalLink}
-              onOpenWeek={handleOpenWeek}
+              onOpenWeek={openWeekHandler}
             />
           ))}
         </Accordion>
@@ -68,7 +65,7 @@ const Phase = () => {
         open={!!selectedWeek}
         week={selectedWeek}
         phaseName={selectedPhase}
-        onClose={handleCloseWeek}
+        onClose={closeWeekHandler}
         onStartLesson={handleStartLesson}
       />
     </div>

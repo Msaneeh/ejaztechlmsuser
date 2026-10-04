@@ -10,7 +10,7 @@ const Quizes = () => {
   const [confirmQuiz, setConfirmQuiz] = useState(null);
 
   const handleStart = (quiz) => {
-    // TODO: persist attempt start in a store / API
+    
     navigate(`/quizzes/${quiz.id}`);
   };
 

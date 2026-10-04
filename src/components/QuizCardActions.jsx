@@ -26,7 +26,7 @@ const QuizCardActions = ({ status, onStartClick }) => {
     );
   }
 
-  // locked
+  
   return (
     <Button
       disabled

@@ -40,7 +40,7 @@ const QuizCard = ({ quiz, onStartClick }) => {
       <div className="pointer-events-none absolute -bottom-20 -right-12 h-60 w-60 rounded-full bg-gold-dim blur-[50px]" />
 
       <div className="relative z-10 flex flex-col gap-3 p-4 sm:p-5">
-        {/* Header row */}
+        
         <div className="flex items-start gap-3">
           <div
             className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${config.iconBg}`}
@@ -92,7 +92,7 @@ const QuizCard = ({ quiz, onStartClick }) => {
           </div>
         </div>
 
-        {/* Last attempt summary */}
+        
         {isCompleted && quiz.lastScore !== null && (
           <LastAttemptSummary
             lastScore={quiz.lastScore}
@@ -103,7 +103,7 @@ const QuizCard = ({ quiz, onStartClick }) => {
           />
         )}
 
-        {/* Actions */}
+        
         <div className="flex flex-wrap items-center gap-2">
           <QuizCardActions
             status={quiz.status}

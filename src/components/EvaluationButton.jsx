@@ -3,7 +3,7 @@ import React from 'react'
 const EvaluationButton = () => {
   return (
     <>
-                        {phase.hasEvaluation && (
+    {phase.hasEvaluation && (
                       <div className="mt-3 flex items-center justify-between rounded-2xl border border-border-brand bg-surface2/60 px-3 py-3 sm:px-4">
                         <div className="flex min-w-0 items-center gap-3">
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">

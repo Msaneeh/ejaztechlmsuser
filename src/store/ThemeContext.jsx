@@ -6,12 +6,12 @@ const STORAGE_KEY = "ejaztech-theme";
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Read from localStorage first, fallback to "system"
+    
     if (typeof window === "undefined") return "system";
     return localStorage.getItem(STORAGE_KEY) || "system";
   });
 
-  // Apply the theme whenever it changes
+ 
   useEffect(() => {
     const root = document.documentElement;
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -22,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
-  // Listen for OS theme changes when "system" is selected
+  
   useEffect(() => {
     if (theme !== "system") return;
 

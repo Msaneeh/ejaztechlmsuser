@@ -5,7 +5,7 @@ const LastAttemptSummary = ({
   attemptsUsed,
   attemptsAllowed,
 }) => {
-  const passed = lastScore >= passingScore;
+  const passed = lastScore >= passingScore; 
 
   return (
     <div className="rounded-2xl border border-border-brand bg-surface2/60 p-3">

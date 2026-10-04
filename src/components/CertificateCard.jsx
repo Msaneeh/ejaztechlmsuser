@@ -56,7 +56,7 @@ const CertificateCard = ({
       <div className="pointer-events-none absolute -left-10 -top-16 h-48 w-48 rounded-full bg-accent-dim blur-[50px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-12 h-60 w-60 rounded-full bg-gold-dim blur-[50px]" />
 
-      {/* Header — click to expand */}
+      
       <button
         type="button"
         onClick={() => !isLocked && onToggle(cert.id)}
@@ -100,7 +100,7 @@ const CertificateCard = ({
         )}
       </button>
 
-      {/* Expanded content */}
+      
       {isOpen && !isLocked && (
         <div className="relative z-10 px-4 pb-4 sm:px-5 sm:pb-5">
           <CertificatePreview cert={cert} />

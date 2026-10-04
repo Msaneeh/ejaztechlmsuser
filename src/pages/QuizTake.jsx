@@ -48,7 +48,7 @@ const QuizTake = () => {
     });
     const score = Math.round((correct / total) * 100);
 
-    // TODO: POST submission to API
+   
     console.log("Quiz submitted:", {
       quizId: quiz.id,
       score,

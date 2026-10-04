@@ -1,11 +1,12 @@
 import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { File, Bell, LockKeyhole, Palette, User } from "lucide-react";
 
 const tabs = [
-  { key: "account", label: "Account", emoji: "👤" },
-  { key: "learning", label: "Learning", emoji: "📚" },
-  { key: "notifications", label: "Notifications", emoji: "🔔" },
-  { key: "privacy", label: "Privacy", emoji: "🔒" },
-  { key: "appearance", label: "Appearance", emoji: "🎨" },
+  { key: "account", label: "Account", emoji: <User /> },
+  { key: "learning", label: "Learning", emoji: <File /> },
+  { key: "notifications", label: "Notifications", emoji: <Bell /> },
+  { key: "privacy", label: "Privacy", emoji: <LockKeyhole /> },
+  { key: "appearance", label: "Appearance", emoji: <Palette /> },
 ];
 
 const SettingsTabs = () => (

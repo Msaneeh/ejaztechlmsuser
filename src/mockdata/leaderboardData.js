@@ -1,4 +1,4 @@
-// Mock leaderboard data — swap this with an API call later
+
 export const leaderboardData = [
   { id: 1, rank: 1, name: "Aisha Bello", xp: 4820, avatar: null, isUser: false, streak: 28 },
   { id: 2, rank: 2, name: "Chinedu Okafor", xp: 4510, avatar: null, isUser: false, streak: 24 },
@@ -14,13 +14,13 @@ export const leaderboardData = [
   { id: 12, rank: 12, name: "Zainab Ahmed", xp: 2180, avatar: null, isUser: false, streak: 6 },
 ];
 
-// Current user's stats (used for the highlight card at the top)
+
 export const currentUser = {
   id: 4,
   rank: 4,
   name: "Sani",
   xp: 3920,
   streak: 12,
-  xpToNextRank: 260, // XP needed to move up one rank
+  xpToNextRank: 260, 
   totalUsers: 248,
 };

@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -22,7 +21,7 @@
   --color-gold: var(--clr-gold);
   --color-gold-dim: var(--clr-gold-dim);
 
-  /* ===== shadcn semantic tokens (mapped to your brand) ===== */
+  /* ===== shadcn semantic tokens ===== */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -64,8 +63,9 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* ==================== LIGHT MODE ==================== */
 :root {
-  /* ===== Your Brand Tokens ===== */
+  /* ===== Brand Tokens ===== */
   --clr-bg: #ffffff;
   --clr-surface: #f9f9f9;
   --clr-surface2: #f0f0f0;
@@ -78,7 +78,7 @@
   --clr-gold: #000000;
   --clr-gold-dim: rgba(0, 0, 0, 0.04);
 
-  /* ===== shadcn tokens mapped to your pure light monochrome ===== */
+  /* ===== shadcn tokens ===== */
   --background: #ffffff;
   --foreground: #0a0a0a;
 
@@ -125,7 +125,9 @@
   --sidebar-ring: #a3a3a3;
 }
 
+/* ==================== DARK MODE ==================== */
 .dark {
+  /* ===== shadcn tokens ===== */
   --background: #0a0a0a;
   --foreground: #fafafa;
 
@@ -167,16 +169,36 @@
   --sidebar-accent-foreground: #fafafa;
   --sidebar-border: rgba(255, 255, 255, 0.1);
   --sidebar-ring: #707070;
+
+  /* ===== NEW: Brand token dark overrides ===== */
+  --clr-bg: #0a0a0a;
+  --clr-surface: #141414;
+  --clr-surface2: #1f1f1f;
+  --clr-border: rgba(255, 255, 255, 0.12);
+  --clr-white: #fafafa; /* Primary text becomes light */
+  --clr-gray: #a3a3a3; /* Muted text */
+  --clr-gray-lt: #d4d4d4; /* Stronger muted */
+  --clr-accent: #fafafa;
+  --clr-accent-dim: rgba(255, 255, 255, 0.08);
+  --clr-gold: #fafafa;
+  --clr-gold-dim: rgba(255, 255, 255, 0.06);
 }
 
+/* ==================== BASE LAYER ==================== */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground antialiased selection:bg-black selection:text-white;
+    @apply bg-background text-foreground antialiased;
     font-family: "Manrope Variable", sans-serif;
+  }
+
+  /* Selection that flips with theme */
+  ::selection {
+    background-color: var(--clr-white);
+    color: var(--clr-bg);
   }
 
   html {
@@ -184,16 +206,16 @@
   }
 }
 
-/* Custom Design System & Glassmorphism Utility Classes */
+/* ==================== COMPONENTS LAYER ==================== */
 @layer components {
   /* Minimal Solid Surface Card */
   .card-surface {
-    @apply bg-surface border border-border rounded-2xl shadow-xs transition-all duration-200;
+    @apply bg-surface border border-border-brand rounded-2xl shadow-xs transition-all duration-200;
   }
 
   /* Liquid Glass Panels (Header, Sidebar, Modals) */
   .glass-panel {
-    background: rgba(255, 255, 255, 0.75);
+    background: color-mix(in oklab, var(--clr-surface) 75%, transparent);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--clr-border);
@@ -201,32 +223,46 @@
 
   /* Liquid Glass Cards */
   .card-glass {
-    background: rgba(249, 249, 249, 0.65);
+    background: color-mix(in oklab, var(--clr-surface) 65%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--clr-border);
     @apply rounded-2xl shadow-xs transition-all duration-200;
   }
 
-  /* Interactive Buttons */
+  /* Primary Button */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-black/80 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer;
+    @apply bg-primary text-primary-foreground transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer;
   }
 
+  .btn-primary:hover {
+    background-color: color-mix(in oklab, var(--primary) 85%, transparent);
+  }
+
+  /* Secondary Button */
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground border border-border hover:bg-surface2 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
+    @apply bg-secondary text-secondary-foreground border border-border-brand transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
   }
 
+  .btn-secondary:hover {
+    background-color: var(--clr-surface2);
+  }
+
+  /* Glass Button */
   .btn-glass {
-    background: rgba(255, 255, 255, 0.5);
+    background: color-mix(in oklab, var(--clr-surface) 50%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--clr-border);
-    @apply text-foreground hover:bg-white/80 transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
+    @apply text-foreground transition-all active:scale-[0.98] rounded-xl px-5 py-2.5 font-medium inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .btn-glass:hover {
+    background-color: var(--clr-surface2);
   }
 }
 
-/* Minimalist Custom Scrollbar */
+/* ==================== SCROLLBAR ==================== */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

@@ -8,13 +8,13 @@ export const tasksData = [
     week: "Week 1",
     dueDate: "2026-09-30",
     xp: 150,
-    status: "pending", // "pending" | "submitted" | "graded"
+    status: "pending", 
     requirements: [
       "Implement gradient descent manually",
       "Visualize the loss curve",
       "Compare with scikit-learn's LinearRegression",
     ],
-    submission: null, // filled in after the user submits
+    submission: null, 
   },
   {
     id: "decision-tree-classifier",

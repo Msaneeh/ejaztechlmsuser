@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import AuthContext from '@/store/AuthContext'; // adjust path to your AuthContext
+import AuthContext from '@/store/AuthContext'; 
 
 const AuthForm = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const authCtx = useContext(AuthContext);
@@ -19,12 +19,10 @@ const AuthForm = () => {
     
     setIsLoading(true);
 
-    // Perform your authentication/API call here if needed
-    // Once successful:
-    authCtx.login(); // Update context state
+   
+    authCtx.login(); 
     setIsLoading(false);
 
-    // Redirect to the desired page (e.g., dashboard or home)
     navigate('/dashbord'); 
   };
 
