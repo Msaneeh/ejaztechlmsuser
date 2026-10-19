@@ -5,7 +5,7 @@ import { leaderboardData, currentUser } from "@/mockdata/leaderboardData";
 
 const LeaderBord = () => {
   const navigate = useNavigate();
-  const [filter, setFilter] = useState("all"); // "all" | "week" | "month"
+  const [filter, setFilter] = useState("all"); 
 
   const filters = [
     { key: "all", label: "All Time" },
@@ -13,7 +13,7 @@ const LeaderBord = () => {
     { key: "month", label: "This Month" },
   ];
 
-  // Placeholder podium order: 2nd, 1st, 3rd (visual arrangement)
+  
   const podium = [leaderboardData[1], leaderboardData[0], leaderboardData[2]];
   const listRest = leaderboardData.slice(3); // rank 4 onwards
 
